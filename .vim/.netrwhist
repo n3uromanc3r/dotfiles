@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/keito'
+let g:netrw_dirhist_2='/home/keito/.MakeMKV'
+let g:netrw_dirhist_3='/home/keito'
+let g:netrw_dirhist_4='/home/keito/.FBReader'
+let g:netrw_dirhist_5='/home/keito'
+let g:netrw_dirhist_6='/home/keito/.filezilla'
+let g:netrw_dirhist_7='/etc/apt/preferences.d'
