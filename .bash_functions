@@ -20,6 +20,41 @@ function welcome() {
 	echo ""
 }
 
+function fix-permissions() {
+	find . -type d -exec chmod 775 {} \;
+	find . -type f -exec chmod 664 {} \;
+}
+
+function shamone() {
+	echo '  _________.__                                         '
+	echo ' /   _____/|  |__ _____    _____   ____   ____   ____  '
+	echo ' \_____  \ |  |  \\__  \  /     \ /  _ \ /    \_/ __ \ '
+	echo ' /        \|   Y  \/ __ \|  Y Y  (  <_> )   |  \  ___/ '
+	echo '/_______  /|___|  (____  /__|_|  /\____/|___|  /\___  >'
+	echo '        \/      \/     \/      \/            \/     \/ '
+	echo '   _____          _____     ._.'
+	echo '  /     \   _____/ ____\____| |'
+	echo ' /  \ /  \ /  _ \   __\/  _ \ |'
+	echo '/    Y    (  <_> )  | (  <_> )|'
+	echo '\____|__  /\____/|__|  \____/__'
+	echo '        \/                   \/'
+}
+
+function pause() {
+	read -p "$*"
+}
+
+## Find and replace all instaces of a word in a specific location
+function find-and-replace() {
+	echo "Please type a folder location to commence search and replace:"
+	read DIR
+	echo "Word to search for?:"
+	read ORIGINAL
+	echo "Word to replace with?:"
+	read REPLACEMENT
+	find "$DIR" -type f -exec sed -i "s/$ORIGINAL/$REPLACEMENT/g" {} \;
+}
+
 if [ -f ~/.bash_functions.private ]; then
    . ~/.bash_functions.private
 fi
